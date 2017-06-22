@@ -12,12 +12,12 @@ View::View()
 
 
 
-void View::updateView(int fleetData[rows][elements]){
+void View::updateView(int fleetData[ROWS][ELEMENTS]){
 
 cout<<"Your fleet:"<<endl;
-for(int i=0; i<rows; i++){
-    for(int j=0; j<elements; j++){
-        cout<<fleetData[rows][elements]<< " ";
+for(int i=0; i<ROWS; i++){
+    for(int j=0; j<ELEMENTS; j++){
+        cout<<fleetData[ROWS][ELEMENTS]<< " ";
 
     }
     cout << endl;

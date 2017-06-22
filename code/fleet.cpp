@@ -18,7 +18,7 @@ while(shipCoordinates.size()<10){
         cout<<"Coordinates of ship"<<endl;
         cin>>x;
         cin>>y;
-            if(x<=rows && y<=rows){
+            if(x<=ROWS && y<=ROWS){
             auto itShip=shipCoordinates.begin();
             auto searchX = shipCoordinates.find(x);
                 if(searchX != shipCoordinates.end() ) {
@@ -50,8 +50,8 @@ createField();
 
 void Fleet::createField(){
 
-    for(int i=0; i<rows; i++){
-        for(int j=0; j<rows; j++){
+    for(int i=0; i<ROWS; i++){
+        for(int j=0; j<ROWS; j++){
                auto searchX = shipCoordinates.find(i);
                    if(searchX != shipCoordinates.end() ) {
                        if(searchX->first==i&&searchX->second==j){
@@ -66,8 +66,8 @@ showMyFleet();
 }
  void Fleet::showMyFleet(){
      cout<<"My Fleet:"<<endl;
-                for(int i=0; i<rows; i++){
-                    for(int j=0; j<rows; j++){
+                for(int i=0; i<ROWS; i++){
+                    for(int j=0; j<ROWS; j++){
                       cout<<field[i][j]<<"";
                     }
                     cout<<endl;
@@ -121,10 +121,10 @@ void Fleet::enemySink(int rows, int collumn){
 void Fleet::generateFleet(){
     int s = 0;
     if(generatedFleet==0){
-           while(s < rows)
+           while(s < ROWS)
            {
-                   int x = rand() % rows;
-                   int y = rand() % collumn;
+                   int x = rand() % ROWS;
+                   int y = rand() % COLLUMN;
                    if(enemyField[x][y] != 1)
                    {
                       s++;
@@ -132,8 +132,8 @@ void Fleet::generateFleet(){
                    }
            }
            cout<<"Enemy Fleet:"<<endl;
-                      for(int i=0; i<rows; i++){
-                          for(int j=0; j<rows; j++){
+                      for(int i=0; i<ROWS; i++){
+                          for(int j=0; j<ROWS; j++){
                             cout<<enemyField[i][j]<<"";
                           }
                           cout<<endl;
@@ -147,8 +147,8 @@ void Fleet::generateFleet(){
     }else{
             generatedFleet=1;
             cout<<"Enemy Fleet:"<<endl;
-                for(int i=0; i<rows; i++){
-                    for(int j=0; j<rows; j++){
+                for(int i=0; i<ROWS; i++){
+                    for(int j=0; j<ROWS; j++){
                     cout<<enemyField[i][j]<<"";
                     }
                     cout<<endl;
