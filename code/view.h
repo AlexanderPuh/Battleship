@@ -14,8 +14,8 @@ class View
 public:
     View();
     void updateView(int fleetData[rows][elements]);
-   /*void finishView();
-    void display();*/
+   void finishView();
+   /* void display();*/
 };
 
 #endif // VIEW_H

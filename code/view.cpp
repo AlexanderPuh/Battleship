@@ -27,9 +27,9 @@ controller->createShip();
 }
 
 
-/*
-void View::finishView(){
 
+void View::finishView(){
+cout<<"***YOU WIN***"<<endl;
 
 }
-*/
+

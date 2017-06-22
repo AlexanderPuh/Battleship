@@ -11,8 +11,15 @@ class Fleet
       };
 
     int field [rows][collumn];
+
      int typeOfShip;
      int enemyField [rows][collumn];
+     int hit;
+     int enemyHit;
+     int const maxHit=10;
+     int const kill=2;
+     int const miss=3;
+     bool generatedFleet=0;
 multimap<int, int> shipCoordinates;
 
 public:
@@ -23,7 +30,11 @@ public:
     void createShip();
     check();
     void createField();
+    void showMyFleet();
     void generateFleet();
+    void sinkTheShip(int rows, int collumn);
+    void enemySink(int rows, int collumn);
+
 };
 
 #endif // SHIP_H
