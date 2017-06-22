@@ -4,16 +4,16 @@
 
 class View
 {
-
+private:
     enum
        {
-          rows = 10,
-          elements= 10
+          ROWS = 10,
+          ELEMENTS= 10
        };
-      int fleetData [rows][elements];
+      int fleetData [ROWS][ELEMENTS];
 public:
     View();
-    void updateView(int fleetData[rows][elements]);
+    void updateView(int fleetData[ROWS][ELEMENTS]);
    void finishView();
    /* void display();*/
 };

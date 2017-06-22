@@ -4,16 +4,17 @@
 using namespace std;
 class Fleet
 {
+private:
     enum
       {
-         rows=10,
-         collumn=10,
+         ROWS=10,
+         COLLUMN=10,
       };
 
-    int field [rows][collumn];
+    int field [ROWS][COLLUMN];
 
      int typeOfShip;
-     int enemyField [rows][collumn];
+     int enemyField [ROWS][COLLUMN];
      int hit;
      int enemyHit;
      int const maxHit=10;
@@ -32,8 +33,8 @@ public:
     void createField();
     void showMyFleet();
     void generateFleet();
-    void sinkTheShip(int rows, int collumn);
-    void enemySink(int rows, int collumn);
+    void sinkTheShip(int ROWS, int COLLUMN);
+    void enemySink(int ROWS, int COLLUMN);
 
 };
 

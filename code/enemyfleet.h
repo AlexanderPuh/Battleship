@@ -4,12 +4,13 @@
 
 class EnemyFleet
 {
+private:
     enum
       {
-         rows = 10,
-         elements= 10
+         ROWS = 10,
+         ELEMENTS= 10
       };
-     int field [rows][elements];
+     int field [ROWS][ELEMENTS];
 public:
     EnemyFleet();
     void generateFleet();

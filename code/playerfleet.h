@@ -4,6 +4,7 @@
 
 class PlayerFleet
 {
+private:
 enum
   {
      rows = 10,

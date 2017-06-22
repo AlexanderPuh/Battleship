@@ -4,12 +4,15 @@
 
 class Ship
 {
+ private:
     enum
       {
-         coordinatesX = 10,
-         coordinatesY= 10
+
+
+         COORDINATES_X = 10,
+         COORDINATES_Y= 10
       };
-     int ship [coordinatesX][coordinatesY];
+     int ship [COORDINATES_X][COORDINATES_Y];
      int typeOfShip;
 public:
     Ship();
